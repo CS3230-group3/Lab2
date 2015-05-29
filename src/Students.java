@@ -1,14 +1,20 @@
+import java.util.*;
 
 public class Students // Here is a test 
 {
-
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) 
+	String firstName;
+	String lastName;
+	double score;
+	Students partner;
+	List<String> response = new ArrayList<String>();
+	
+	public Students(String firstName, String lastName, double score, Students partner, List response )
 	{
-		// TODO Auto-generated method stub
-
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.score = score;
+		this.partner = partner;
+		this.response = response;
 	}
-
+	
 }
