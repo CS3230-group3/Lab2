@@ -19,15 +19,21 @@ public class Students
 	
 	public void Chat()
 	{
-		for(int i = 0; i <= response.size(); i++)
+		for(int i = 0; i < response.size(); i++)
 		{
-			System.out.println(response.get(i));
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException e) {
-				Thread.currentThread().interrupt();
-			}
-			System.out.println(partner.response.get(i));
+			System.out.println("Student 1: " + response.get(i));
+			Sleep();
+			System.out.println("Student 2: " + partner.response.get(i));
+			Sleep();
+		}
+	}
+	
+	public void Sleep()
+	{
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
 		}
 	}
 	
