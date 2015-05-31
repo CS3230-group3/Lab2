@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Main{
-	//testing .gitignore file
+	
 	public static void main(String[] args) 
 	{
 		List<String> s1List = new ArrayList<String>(Arrays.asList("Hello","It's a nice day","I like ice cream","I'm good with computers","Goodbye"));
@@ -13,17 +13,19 @@ public class Main{
 		Students s2 = new Students("Tony","Alder",4.0,null,s2List);
 		Students s1 = new Students("Chris","Strickland",4.0,s2,s1List);
 		s2 = new Students("Tony","Alder",4.0,s1,s2List);
+		Students s3 = new Students("Chris","Strickland",3.0,s2,s3List);
 		
 		student.add(s1);
 		student.add(s2);
+		student.add(s3);
 		System.out.println(student);
-		
+	
 		for( Iterator<Students> it = student.iterator(); it.hasNext(); )
 		{
 			Students s = it.next();
-			s.Chat();
+			//s.Chat();
+			System.out.println(s.firstName);
 		}
-		
 		//s1.Chat();
 		//s2.Chat();
 	}

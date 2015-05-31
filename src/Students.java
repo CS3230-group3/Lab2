@@ -37,4 +37,19 @@ public class Students
 		}
 	}
 	
+	@Override 
+	public boolean equals(Object o)
+	{
+		if(!(o instanceof Students))
+			return false;
+		
+		Students s = (Students) o;
+		return s.firstName.equals(firstName) && s.lastName.equals(lastName);
+	}
+	
+	@Override 
+	public int hashCode()
+	{
+		return 37 * firstName.hashCode() + lastName.hashCode();
+	}
 }
