@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Main{
-
+	//testing .gitignore file
 	public static void main(String[] args) 
 	{
 		List<String> s1List = new ArrayList<String>(Arrays.asList("Hello","It's a nice day","I like ice cream","I'm good with computers","Goodbye"));
