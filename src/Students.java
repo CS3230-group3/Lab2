@@ -17,13 +17,17 @@ public class Students
 		this.response = response;
 	}
 	
+	public void setPartner(Students partner) {
+		this.partner = partner;
+	}
+
 	public void Chat()
 	{
 		for(int i = 0; i < response.size(); i++)
 		{
-			System.out.println("Student 1: " + response.get(i));
+			System.out.println(firstName + " " + lastName + ": " + response.get(i));
 			Sleep();
-			System.out.println("Student 2: " + partner.response.get(i));
+			System.out.println(partner.firstName + " " + partner.lastName + ": " + partner.response.get(i));
 			Sleep();
 		}
 	}
