@@ -1,5 +1,5 @@
 
-public class Group {
+public class Group{
 	
 	Students partner;
 	Students additionalPartner;
@@ -11,20 +11,60 @@ public class Group {
 		this.partner.setPartner(additionalPartner);
 		this.additionalPartner.setPartner(partner);
 	}
-	
-	@Override 
-	public boolean equals(Object o)
+
+	@Override
+	public int hashCode() 
 	{
-		if(!(o instanceof Students))
-			return false;
-		
-		Students s = (Students) o;
-		return s.firstName.equals(partner.firstName) && s.lastName.equals(partner.lastName);
+		final int prime = 31;
+		int result = 1;
+		result = prime
+				* result
+				+ ((additionalPartner == null) ? 0 : additionalPartner
+						.hashCode());
+		result = prime * result + ((partner == null) ? 0 : partner.hashCode());
+		return result;
 	}
-	
-	@Override 
-	public int hashCode()
+
+	@Override
+	public boolean equals(Object obj) 
 	{
-		return 37 * partner.firstName.hashCode() + partner.lastName.hashCode();
+		if (this == obj)
+		{
+			return true;
+		}
+		if (obj == null)
+		{
+			return false;
+		}
+		if (getClass() != obj.getClass())
+		{
+			return false;
+		}
+		
+		Group other = (Group) obj;
+		
+		if (additionalPartner == null) 
+		{
+			if (other.additionalPartner != null)
+			{
+				return false;
+			}
+		} 
+		else if (!additionalPartner.equals(other.additionalPartner))
+		{
+			return false;
+		}
+		if (partner == null) 
+		{
+			if (other.partner != null)
+			{
+				return false;
+			}
+		} 
+		else if (!partner.equals(other.partner))
+		{
+			return false;
+		}
+		return true;
 	}
 }

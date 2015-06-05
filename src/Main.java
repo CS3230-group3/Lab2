@@ -33,31 +33,23 @@ public class Main{
 		Group g4 = new Group(s3,s5);
 		Group g5 = new Group(s4,s9);
 		Group g6 = new Group(s11,s6);
-		//g1.partner.Chat();
+		Group g7 = new Group(s2,s1);
 		
-		//g2.partner.Chat();
-		// added duplicate student (s1), the result shows that it is ignored in the set collection 
-		//Students s13 = new Students("Chris","Strickland",3.0,s2,s3List);
+		group.add(g1);
+		group.add(g2);
+		group.add(g3);
+		group.add(g4);
+		group.add(g5);
+		group.add(g6);
+		group.add(g7);
 	
-		/*
-		student.add(s1);
-		student.add(s2);
-		student.add(s13);
-		student.add(s3);
-		student.add(s4);
-		System.out.println(student);
-		*/
+		System.out.println(group);
 	
 		for( Iterator<Group> it = group.iterator(); it.hasNext(); )
 		{
 			Group g = it.next();
-			System.out.println(g.partner.firstName);
-			System.out.println(g.additionalPartner.firstName);
+			//g.partner.Chat();
 		}
-		//System.out.println(g1.partner.firstName);
-		//System.out.println(g1.additionalPartner.firstName);
-		//s1.Chat();
-		//s2.Chat();
 	}
 
 }
