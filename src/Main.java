@@ -27,28 +27,20 @@ public class Main{
 		Students s11 = new Students("Andrew","Gray",4.0,null,s5List);
 		Students s12 = new Students("Justin","Walker",4.0,null,s6List);
 		
-		Group g1 = new Group(s8,s10);
-		Group g2 = new Group(s12,s7);
-		Group g3 = new Group(s1,s2);
-		Group g4 = new Group(s3,s5);
-		Group g5 = new Group(s4,s9);
-		Group g6 = new Group(s11,s6);
-		Group g7 = new Group(s2,s1);
+		group.add(new Group(s8,s10));
+		group.add(new Group(s12,s7));
+		group.add(new Group(s1,s2));
+		group.add(new Group(s3,s5));
+		group.add(new Group(s4,s9));
+		group.add(new Group(s11,s6));
+		group.add(new Group(s2,s1));
 		
-		group.add(g1);
-		group.add(g2);
-		group.add(g3);
-		group.add(g4);
-		group.add(g5);
-		group.add(g6);
-		group.add(g7);
-	
 		System.out.println(group);
 	
 		for( Iterator<Group> it = group.iterator(); it.hasNext(); )
 		{
 			Group g = it.next();
-			//g.partner.Chat();
+			g.partner.Chat();
 		}
 	}
 
