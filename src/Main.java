@@ -33,7 +33,7 @@ public class Main{
 		group.add(new Group(s3,s5));
 		group.add(new Group(s4,s9));
 		group.add(new Group(s11,s6));
-		group.add(new Group(s2,s1));
+		group.add(new Group(s1,s2));
 		
 		System.out.println(group);
 	
